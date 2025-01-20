@@ -224,7 +224,21 @@ footer {
 /* Sliding Background Images Section */
 .sliding-background {
     width: 100%;
+    max-width: 100%;
     height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+    position: relative; /* Container must be relative to position children */
+    background-color: #f3f3f3; /* Adding a subtle background color */
+    margin-bottom: 50px; /* Space margin with footer */
+
+
+}
+
+
+.sliding-background img{
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* Adjust the height as needed */
     overflow: hidden;
     position: relative; /* Container must be relative to position children */
     background-color: #f3f3f3; /* Adding a subtle background color */
@@ -278,4 +292,23 @@ footer {
     text-align: center;
     position: relative; /* Changed to relative to allow margin spacing */
     margin-top: 20px; /* Added margin-top to space it from the content above */
+}
+
+.sliding-background {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.sliding-background div {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sliding-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

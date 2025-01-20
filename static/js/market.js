@@ -53,3 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide); // Initialize the first slide
     setInterval(nextSlide, 3000); // Change slide every 3 seconds
 });
+const slides = document.querySelectorAll('.sliding-background div');
+let currentSlide = 0;
+
+function showNextSlide() {
+    slides[currentSlide].style.transform = 'translateX(-100%)';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.transform = 'translateX(0)';
+}
+
+setInterval(showNextSlide, 1000); // Change slide every 1 seconds
