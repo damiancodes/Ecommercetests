@@ -1,0 +1,281 @@
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light background color */
+    border-bottom: 1px solid #ddd; /* Subtle border */
+}
+
+.top-header h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.top-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.top-header select,
+.top-header .social-media-icons {
+    margin-left: 10px;
+}
+
+.social-media-icons a {
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #444;
+}
+
+.social-media-icons a:hover {
+    color: #42bde0;
+}
+
+/* Middle Header */
+.middle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.market-icon i {
+    font-size: 24px;
+    color: #444;
+}
+
+.middle-header input[type="text"] {
+    padding: 5px;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.middle-header select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.middle-header button {
+    background-color: #007bff; 
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.middle-header button:hover {
+    background-color: #0056b3; 
+}
+
+.shopping-cart-icon i {
+    font-size: 24px;
+    color: #444;
+}
+
+/* Bottom Header */
+.bottom-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.hamburger-menu i {
+    font-size: 24px;
+    color: #444;
+    cursor: pointer;
+    margin-right: 15px; 
+}
+
+/* Aligning the Navigation Links from the Left */
+.bottom-header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-header nav ul li {
+    margin-right: 20px;
+}
+
+.bottom-header nav ul li a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    font-size: 16px;
+}
+
+.bottom-header nav ul li a:hover {
+    color: #0056b3; /* Darker link color on hover */
+}
+
+/* Toggle menu (hidden by default) */
+nav ul {
+    display: none;
+}
+
+nav ul.show {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.featured-products .product {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 200px;
+}
+
+.featured-products .product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.featured-products .product p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.featured-products .product button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.featured-products .product button:hover {
+    background-color: #0056b3;
+}
+/* Categories Section */
+.categories {
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.category-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 150px;
+}
+
+.category-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* Sliding Background Images Section */
+.sliding-background {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+    position: relative; /* Container must be relative to position children */
+    background-color: #f3f3f3; /* Adding a subtle background color */
+    margin-bottom: 50px; /* Space margin with footer */
+}
+
+/* Slider will fill the whole width */
+.sliding-background .slide {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+    border: 5px solid #ddd; /* Adding border */
+    border-radius: 30px;
+    box-sizing: border-box; /* Ensure border is included within the dimensions */
+    z-index: 1; /* Ensure slides are above other content */
+}
+
+.sliding-background .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+    filter: brightness(90%) contrast(110%); /* Adjusting brightness and contrast */
+}
+
+.sliding-background .active {
+    opacity: 1; /* Make the active slide visible */
+}
+
+.slide img {
+    animation: zoomInOut 10s ease-in-out infinite; /* Adding a zoom effect */
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Changed to relative to allow margin spacing */
+    margin-top: 20px; /* Added margin-top to space it from the content above */
+}
